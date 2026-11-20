@@ -5,6 +5,9 @@
 :root{color-scheme:light;--blue:#075ac2;--line:#d8e1eb}
 *{box-sizing:border-box}body{font-family:system-ui,sans-serif;margin:0;color:#182637;background:#f4f7fb}
 main{max-width:1220px;margin:auto;padding:30px 22px}h1{font-size:26px;margin:0 0 12px}
+.page-header{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.event-logo{display:block;width:340px;max-width:100%;height:auto;border-radius:6px}
+.page-label{font-size:13px;font-weight:600;color:#52657b}
 .note{color:#48596c;font-size:14px;line-height:1.6}a{color:var(--blue)}
 .filters{display:flex;gap:10px;flex-wrap:wrap;position:sticky;top:0;background:#f4f7fb;padding:16px 0;z-index:2}
 input[type=search]{min-width:260px;flex:1}input,select,button{padding:10px;border:1px solid var(--line);border-radius:6px;background:white;font:inherit}
@@ -16,9 +19,24 @@ article{border-top:1px solid var(--line);padding:16px 0}h3{font-size:17px;line-h
 .badge{display:inline-block;background:#edf4fc;border-radius:4px;padding:2px 6px;font-size:12px;margin-right:8px}
 .warn{background:#fff1d9;color:#7e4b00}.links{margin:12px 0;font-size:14px}details{font-size:13px;color:#52657b;margin-top:8px}
 .essential{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px;margin:18px 0}.essential li{margin:10px 0;line-height:1.5}
+.overview{border:0;background:transparent;padding:0;margin:22px 0 26px}
+.overview-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:14px 0 0}
+.overview-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:8px;padding:16px;min-width:0}
+.overview-number{font-size:13px;font-weight:700;letter-spacing:1px;color:var(--blue);margin-bottom:10px}
+.overview-card h3{font-size:16px;line-height:1.4;overflow-wrap:anywhere;margin:0 0 7px}
+.overview-scope{font-weight:700;font-size:14px;margin:0 0 9px}
+.overview-description{font-size:14px;line-height:1.65;color:#48596c;margin:0 0 16px}
+.overview-count{font-size:13px;font-weight:700;color:var(--blue);margin:auto 0 0;padding-top:10px;border-top:1px solid var(--line)}
+@media(max-width:1000px){.overview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){main{padding:20px 12px}section{padding:14px}.filters{position:static}select{max-width:100%}h1{font-size:22px}}
+@media(max-width:600px){.overview{padding:0}.overview-grid{grid-template-columns:1fr}.overview-card{padding:16px}.overview-description{margin-bottom:10px}}
 </style></head><body><main>
-<h1>Microsoft Ignite 2026 · AI Apps 검토 후보 50개</h1>
+<header class="page-header"><img class="event-logo" src="assets/ignite-2026.png" alt="Microsoft Ignite" width="340" height="58"><span class="page-label">Ignite 2026 · 비공식 세션 선정표</span></header>
+<h1>AI Apps 검토 후보 50개</h1>
+<section class="overview" aria-labelledby="overview-heading">
+<h2 id="overview-heading">5개 검토 분류 · 각 10개</h2>
+<ol class="overview-grid"><li class="overview-card"><span class="overview-number">01</span><h3>Agents &amp; Foundry</h3><p class="overview-scope">에이전트 구현</p><p class="overview-description">모델·harness·멀티모달 입력·MCP 등 에이전트가 동작하는 구조.</p><p class="overview-count">10개 · 필수 2개 포함</p></li><li class="overview-card"><span class="overview-number">02</span><h3>Data &amp; Grounding</h3><p class="overview-scope">데이터·컨텍스트</p><p class="overview-description">검색·지식 그래프·업무 데이터·메모리와 앱 상태 연결.</p><p class="overview-count">10개 · 필수 1개 포함</p></li><li class="overview-card"><span class="overview-number">03</span><h3>Runtime &amp; Infrastructure</h3><p class="overview-scope">배포·실행 환경</p><p class="overview-description">AKS·앱 호스팅·sandbox·gateway·기업 배포 기반.</p><p class="overview-count">10개 · 필수 2개 포함</p></li><li class="overview-card"><span class="overview-number">04</span><h3>Evaluation &amp; FinOps</h3><p class="overview-scope">품질·관측·비용</p><p class="overview-description">평가·trace·SRE 운영과 모델·에이전트의 비용 관리.</p><p class="overview-count">10개 · 필수 1개 포함</p></li><li class="overview-card"><span class="overview-number">05</span><h3>DevOps &amp; Governance</h3><p class="overview-scope">개발·보안·통제</p><p class="overview-description">코드 검토·CI·도구 권한·데이터 보호·정책.</p><p class="overview-count">10개 · 필수 0개 포함</p></li></ol>
+</section>
 <p class="note">필수 핵심 발표 6개 + 심화 후보 44개 · 5개 검토묶음, 각 10개<br>
 필수 발표와 Partner Keynote 제목 원문 확인: 2026-11-20. 나머지는 2026-11-09 카탈로그 스냅샷 기준.<br>
 세션 소개문 기준 선별. 영상 전체 리뷰 전이며 녹화 공개 상태는 원문 확인.</p>
